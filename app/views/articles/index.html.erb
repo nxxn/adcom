@@ -1,0 +1,39 @@
+<section class="home_big_cover">
+  <div class="home_big_cover_overlay"></div>
+
+  <div class="container">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8 text-center">
+      <h1>We research, analyze, assess, and evaluate communication patterns and behavior</h1>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
+</section>
+
+<% @articles.each do |article| %>
+  <section class="">
+    <div class="container border_bottom_grey padding_bottom_twenty_px">
+      <%= link_to article_path(article), class: "black_text" do %>
+        <div class="col-sm-12 h4 article_text margin_top_twenty_px">
+          <%= l(article.created_at, :format => '%d %B %Y') %>
+        </div>
+
+        <div class="col-sm-12 h3 article_text margin_top_zero_px">
+          <%= article.title %>
+        </div>
+
+        <div class="col-sm-12 trocchi article_text">
+          <p>
+            <%= article.short_description %>
+
+            <%= link_to "Read more...", article_path(article), class: "green_text" %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+<% end %>

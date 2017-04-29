@@ -1,0 +1,31 @@
+<section class="article_container padding_bottom_forty_px trocchi light_green_background">
+  <div class="container">
+    <div class="col-sm-12 h4 article_text margin_top_twenty_px">
+      <%= l(@article.created_at, :format => '%d %B %Y') %>
+    </div>
+
+    <div class="col-sm-12 article_text margin_top_zero_px">
+      <h1><%= @article.title %></h1>
+    </div>
+
+    <% if @article.pdf %>
+      <div class="col-sm-12 article_document_container padding_top_twenty_px">
+        <embed src="<%= @article.document %>" width="100%" height="100%">
+      </div>
+    <% else %>
+      <div class="col-sm-12 trocchi article_text padding_top_twenty_px">
+        <p>
+          <%= @article.text.html_safe %>
+        </p>
+      </div>
+    <% end %>
+
+    <div class="col-sm-12">
+      <div class="text-center margin_top_thirty_px">
+        <div class="btn-group">
+          <%= link_to "Back to articles", articles_path, class: "see_all_button green_background" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

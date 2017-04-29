@@ -1,0 +1,19 @@
+Message from:
+<%= @message.name %> <%= "<#{@message.email}>" %>
+<% unless @message.phone.blank? %>
+Phone: <%= @message.phone %>
+<% end %>
+<% unless @message.company.blank? %>
+Company: <%= @message.company %>
+<% end %>
+<% unless @message.company.blank? %>
+Job title/role: <%= @message.title %>
+<% end %>
+
+Message:
+<%= @message.message %>
+
+<% unless @message.info.blank?  %>
+"How did you find Advanced Communication Designs?" answer:
+<%= @message.info %>
+<% end %>

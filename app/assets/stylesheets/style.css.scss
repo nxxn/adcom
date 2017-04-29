@@ -1,0 +1,627 @@
+body {
+  color: #333;
+}
+
+section {
+  padding: 20px 0;
+}
+
+.trocchi {
+  font-family: 'Trocchi', serif;
+}
+
+.font_size_21 {
+  font-size: 21px !important;
+}
+
+.gray_background {
+  background-color: #ebebeb;
+}
+
+.green_background {
+  background-color: #469a60;
+}
+
+.light_green_background {
+  background-color: #ecf9f1;
+}
+
+.border_bottom_grey {
+  border-bottom: 1px solid #ccc;
+}
+
+.green_background_gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e6f48+0,469a60+33,469a60+62,1e6f48+100 */
+  background: #1e6f48; /* Old browsers */
+  background: -moz-linear-gradient(left,  #1e6f48 0%, #469a60 33%, #469a60 62%, #1e6f48 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #1e6f48 0%,#469a60 33%,#469a60 62%,#1e6f48 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #1e6f48 0%,#469a60 33%,#469a60 62%,#1e6f48 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e6f48', endColorstr='#1e6f48',GradientType=1 ); /* IE6-9 */
+}
+
+.green_background_gradient.h2 {
+  color: #fff;
+  padding: 20px 0;
+  font-size: 32px;
+  margin: 0px;
+}
+
+.green_text {
+  color: #469a60;
+}
+
+.black_text {
+  color: #333;
+}
+
+.black_text:hover, .black_text:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+.green_text:hover, .green_text:focus {
+  color: #469a60;
+}
+
+.padding_top_ten_px {
+  padding-top: 10px;
+}
+
+.padding_top_twenty_px {
+  padding-top: 20px !important;
+}
+
+.padding_top_thirty_px {
+  padding-top: 30px;
+}
+
+.padding_top_forty_px {
+  padding-top: 40px;
+}
+
+.padding_top_sixty_px {
+  padding-top: 60px;
+}
+
+.padding_bottom_twenty_px {
+  padding-bottom: 20px;
+}
+
+.padding_bottom_forty_px {
+  padding-bottom: 40px;
+}
+
+.no_bottom_padding {
+  padding-bottom: 0px;
+}
+
+.no_top_padding {
+  padding-top: 0px;
+}
+
+.margin_top_zero_px {
+  margin-top: 0px;
+}
+
+.margin_top_twenty_px {
+  margin-top: 20px;
+}
+
+.margin_top_thirty_px {
+  margin-top: 30px;
+}
+
+.top_header {
+  padding: 20px 0;
+}
+
+.top_header .menu_container {
+  padding-top: 17px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.menu_container ul {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.menu_container ul a {
+  color: #333;
+  text-decoration: none;
+}
+
+.menu_container ul a:hover {
+  color: #828282;
+  text-decoration: none;
+  background: none;
+}
+
+.menu_container ul a.active {
+  border-bottom: 1px solid #333;
+}
+
+.top_header .mobile_menu_container {
+  padding-top: 17px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.mobile_menu_container ul {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.mobile_menu_container ul a {
+  color: #333;
+  text-decoration: none;
+}
+
+.mobile_menu_container ul a:hover {
+  color: #828282;
+  text-decoration: none;
+  background: none;
+}
+
+.mobile_menu_container ul a.active {
+  border-bottom: 1px solid #333;
+}
+
+.nav>li>a {
+  padding: 0px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #469a60;
+}
+
+.navbar-toggle {
+  border-color: #469a60;
+  border-radius: 0px;
+}
+
+#bs-example-navbar-collapse-1 {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-right: 0px;
+}
+
+#bs-example-navbar-collapse-1 a.active {
+  border: none;
+  color: #469a60;
+}
+
+.collapse {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .menu_container {
+    display: none;
+  }
+
+  .header_logo_container {
+    width: 100%;
+  }
+
+  .home_big_cover {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-collapse.collapse.in {
+    display: block !important;
+  }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important;
+  }
+
+  .navbar-header {
+    float: none;
+  }
+
+  .nav > li {
+    float: none !important;
+  }
+}
+
+.header_logo_container img {
+  max-height: 47px;
+}
+
+.home_big_cover {
+  background-color: #fff;
+  background-image: asset-data-url('short_circuit.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  padding: 130px 0;
+  position: relative;
+  color: #fff;
+}
+
+.home_big_cover.services_big_cover {
+  background-color: #fff;
+  background-image: asset-data-url('short_circuit.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  padding: 130px 0;
+  position: relative;
+  color: #fff;
+}
+
+.home_big_cover.wiw_big_cover {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e6f48+0,469a60+33,469a60+62,1e6f48+100 */
+  background: #1e6f48; /* Old browsers */
+  background: -moz-linear-gradient(left,  #1e6f48 0%, #469a60 33%, #469a60 62%, #1e6f48 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #1e6f48 0%,#469a60 33%,#469a60 62%,#1e6f48 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #1e6f48 0%,#469a60 33%,#469a60 62%,#1e6f48 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e6f48', endColorstr='#1e6f48',GradientType=1 ); /* IE6-9 */
+}
+
+.home_big_cover_overlay {
+  background-color: rgba(0, 0, 0, 0.39);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.home_big_cover.wiw_big_cover .wiw_cover_overlay {
+  background-image: asset-data-url('wiw_cover.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  background-size: initial;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.home_big_cover h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.home_about_us .home_about_us_text {
+  font-size: 22px;
+  line-height: 35px;
+  padding: 60px 0px 30px;
+}
+
+.home_about_us .home_about_us_text span {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+}
+
+.home_about_us ul {
+  margin: 0px;
+  padding: 0px;
+  font-size: 18px;
+  padding: 20px 50px 0;
+}
+
+.home_about_us ul li {
+  list-style: none;
+}
+
+.home_about_us ul li i {
+  color: #21724a;
+  padding: 10px;
+}
+
+.home_about_us .about_us_p {
+  font-size: 18px;
+  padding: 0px 50px;
+}
+
+.about_bios {
+  font-size: 16px;
+}
+
+.about_bios img {
+  max-height: 215px;
+}
+
+.about_bios .about_bio_name {
+  font-size: 18px;
+  display: block;
+}
+
+.about_bios .about_bio_position {
+  font-size: 16px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.about_bios a {
+  color: #333;
+}
+
+.about_bios a:hover, .about_bios a.focus {
+  text-decoration: none;
+  color: #777;
+}
+
+.clients_container {
+  padding-bottom: 30px;
+  display: table-cell;
+}
+
+.client_logo_container {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
+.client_logo_container img {
+  max-height: 111px;
+}
+
+.article_container .article_text {
+  padding: 0 30px;
+}
+
+.article_container h1 {
+  margin-top: 10px;
+}
+
+.article_document_container {
+  height: 600px;
+  // height: calc(100vh - 390px);
+}
+
+.see_all_button {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  outline: 0 none;
+}
+
+.see_all_button:hover, .see_all_button:focus {
+  text-decoration: none;
+  background-color: #3A8C54;
+  color: #fff;
+}
+
+.footer {
+  padding: 60px 0 30px;
+  background-color: #ebebeb;
+}
+
+.footer .creator_link {
+  padding-top: 22px;
+}
+
+.footer .creator_link a {
+  color: #333;
+}
+
+.footer .social_footer {
+  position: relative;
+}
+
+.footer .social_footer .share {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  z-index: 1;
+  list-style: none;
+  margin: 0px;
+  padding-left: 15px;
+}
+
+.footer .social_footer ul.share li {
+  float: left;
+  margin: 0 0.5em;
+}
+
+.footer .social_footer .share li a {
+  color: #fff;
+}
+
+.footer .social_footer .share li a:hover {
+  color: #ccc;
+}
+
+.footer .social_footer ul.share li a {
+  font-size: 1.2em;
+  display: block;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 2em;
+}
+
+.social_footer .share {
+  display: none;
+}
+
+.footer_social_list .share {
+  display: block;
+}
+
+#mc_embed_signup {
+  clear:left;
+  width:100%;
+  margin-top: -30px;
+}
+
+#mc_embed_signup form {
+  padding-top: 0px;
+}
+
+#mc_embed_signup .button {
+  font-size: 14px;
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  letter-spacing: .03em;
+  color: #fff;
+  background-color: #469a60;
+  box-sizing: border-box;
+  height: 31px;
+  line-height: 32px;
+  padding: 0 18px;
+  display: inline-block;
+  margin: 0;
+  transition: all 0.23s ease-in-out 0s;
+}
+
+#mc_embed_signup .button:hover {
+  text-decoration: none;
+  background-color: #3A8C54;
+  color: #fff;
+}
+
+#mc_embed_signup input.email:focus {
+  outline: 0 none;
+}
+
+.bg-facebook {
+  background-color: #3b5998;
+}
+
+.bg-twitter {
+  background-color: #55acee;
+}
+
+.bg-linkedin {
+  background-color: #1f7db6;
+}
+
+.clients_container img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Admin section start
+  .admin_articles_list a {
+    color: #333;
+  }
+
+  .admin_articles_list a:hover, .admin_articles_list a:focus {
+    color: #6F6F6F;
+    text-decoration: none;
+  }
+
+  .publishdate_admin {
+    color: #ef4035;
+  }
+
+  .glyphicon-ok {
+    color: green;
+  }
+
+  .glyphicon-remove {
+    color: red;
+  }
+
+// Admin seciton end
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .social_footer .share {
+    display: block;
+  }
+
+  .creator_link {
+    width: 100%;
+  }
+
+  .mc_subscribe_container {
+    width: 100%;
+  }
+
+  .hide_on_mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home_about_us .home_about_us_text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .clients_container {
+    padding: 0;
+  }
+
+  .clients_container img {
+    margin-top: 30px;
+  }
+
+  #mc_embed_signup {
+    margin-top: 10px;
+  }
+
+  .hide_on_mobile {
+    display: none;
+  }
+
+  .footer {
+    padding: 20px 0 30px;
+  }
+
+  .about_bio_name {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .about_bio_position {
+    text-align: center;
+  }
+
+  .about_bios img {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 215px;
+  }
+
+  .social_footer .share {
+    display: block;
+  }
+
+  .client_logo_container {
+    width: 100%;
+    float: left;
+  }
+
+  .client_logo_container img {
+    height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+}

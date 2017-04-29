@@ -1,0 +1,82 @@
+<section class="home_big_cover">
+  <div class="home_big_cover_overlay"></div>
+
+  <div class="container">
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8 text-center">
+      <h1>We research, analyze, assess, and evaluate communication patterns and behavior</h1>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="col-sm-12 text-center">
+      <div class="h2 green_background_gradient trocchi">Contact</div>
+    </div>
+
+    <div class="col-sm-12 padding_top_thirty_px">
+
+      <%= form_for @message, :url => message_path do |f| %>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="message_name">Name*</label>
+            <input type="text" name="message[name]" class="form-control" id="message_name">
+          </div>
+          <div class="form-group">
+            <label for="message_email">Email address*</label>
+            <input type="email" name="message[email]" class="form-control" id="message_email">
+          </div>
+          <div class="form-group">
+            <label for="message_phone">Phone number</label>
+            <input type="text" name="message[phone]" class="form-control" id="message_phone">
+          </div>
+          <div class="form-group">
+            <label for="message_company">Company</label>
+            <input type="text" name="message[company]" class="form-control" id="message_company">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="message_title">Title/role</label>
+            <input type="text" name="message[title]" class="form-control" id="message_title">
+          </div>
+          <div class="form-group">
+            <label for="message_info">How did you find Advanced Communication Designs?</label>
+            <input type="text" name="message[info]" class="form-control" id="message_info">
+          </div>
+          <div class="form-group">
+            <label for="message_message">Your question*</label>
+            <textarea class="form-control" rows="5" name="message[message]" id="message_message" style="height: 110px;"></textarea>
+          </div>
+          <button type="submit" class="pull-right send_message_submit see_all_button
+green_background">Send</button>
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</section>
+
+<section class="home_about_us">
+  <div class="container">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 home_about_us_text font_size_21">
+      <span>
+        We have offices in the San Francisco Bay Area, and we’d love to hear from you.
+        <br>
+        <br>
+        <div class="text-center">
+          You can reach us at
+          <br>
+          <i class="fa fa-phone green_text"></i> (510) 655-6477
+        </div>
+      </span>
+    </div>
+  </div>
+</section>

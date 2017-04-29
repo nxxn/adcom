@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adcom Designs</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Trocchi' rel='stylesheet' type='text/css'>
+
+  <!-- Begin MailChimp Signup Form -->
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <!--End mc_embed_signup-->
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= csrf_meta_tags %>
+
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <section class="top_header">
+    <div class="container">
+      <div class="col-sm-6 header_logo_container">
+        <%= link_to image_tag("horizontal_logo.png", alt: "Adcom Designs logo", class: "img-responsive"), root_url, class: "pull-left" %>
+
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div id="bs-example-navbar-collapse-1" class="col-sm-6 text-center mobile_menu_container collapse navbar-collapse pull-right">
+        <div class="btn-group">
+          <ul class="list-inline nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_path, class: "#{params[:action] == 'index' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+            <li><%= link_to "About", about_path, class: "#{params[:action] == 'about' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+            <li><%= link_to "Services", services_path, class: "#{params[:action] == 'services' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+            <li><%= link_to "Write It Well", writeitwell_path, class: "#{params[:action] == 'writeitwell' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+            <li><%= link_to "Clients", clients_path, class: "#{params[:action] == 'clients' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+            <li><%= link_to "News", articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
+            <li><%= link_to "Contact", contact_path, class: "#{params[:action] == 'contact' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm-6 text-right menu_container">
+        <ul class="list-inline">
+          <li><%= link_to "Home", root_path, class: "#{params[:action] == 'index' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          <li><%= link_to "About", about_path, class: "#{params[:action] == 'about' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          <li><%= link_to "Services", services_path, class: "#{params[:action] == 'services' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          <li><%= link_to "Write It Well", writeitwell_path, class: "#{params[:action] == 'writeitwell' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          <li><%= link_to "Clients", clients_path, class: "#{params[:action] == 'clients' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+          <li><%= link_to "News", articles_path, class: "#{params[:controller] == 'articles' ? 'active' : ''}" %></li>
+          <li><%= link_to "Contact", contact_path, class: "#{params[:action] == 'contact' && params[:controller] == 'home' ? 'active' : ''}" %></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <%= yield %>
+
+  <section id="footer" class="footer">
+    <div class="container">
+      <div class="col-sm-3 social_footer hide_on_mobile footer_social_list">
+        <ul class="share">
+    			<li>
+            <a href="https://www.facebook.com/adcomdesigns/" class="flaticon-facebook bg-facebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+          </li>
+    			<li>
+            <a href="https://twitter.com/adcomdesigns" class="flaticon-twitter bg-twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+          </li>
+    			<li>
+            <a href="https://www.linkedin.com/in/natashaterkandadcomdesigns"class="flaticon-google bg-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </li>
+    		</ul>
+      </div>
+
+      <div class="col-sm-6 mc_subscribe_container">
+        <div id="mc_embed_signup">
+          <form action="//writeitwell.us12.list-manage.com/subscribe/post?u=4daed860b2f2cbfdc96a04a18&amp;id=0bb81d9e48" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+          	<label for="mce-EMAIL">Subscribe to our newsletter</label>
+          	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4daed860b2f2cbfdc96a04a18_0bb81d9e48" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-sm-3 creator_link social_footer">
+        <ul class="share">
+    			<li>
+            <a href="https://www.facebook.com/adcomdesigns/" class="flaticon-facebook bg-facebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+          </li>
+    			<li>
+            <a href="https://twitter.com/adcomdesigns" class="flaticon-twitter bg-twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+          </li>
+    			<li>
+            <a href="https://www.linkedin.com/in/natashaterkandadcomdesigns"class="flaticon-google bg-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </li>
+    		</ul>
+
+        <a class="pull-right" href="http://gnotov.com/en">Created by <span class="green_text">gnotov.com</span></a>
+      </div>
+    </div>
+  </section>
+
+  <%= javascript_include_tag 'application' %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62900124-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</body>
+</html>

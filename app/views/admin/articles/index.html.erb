@@ -1,0 +1,41 @@
+<section class="admin_articles_list">
+  <div class="container">
+    <div class="col-md-12">
+      <%= link_to "New Article", new_admin_article_path, class: "new_article_link btn btn-default" %>
+    </div>
+    <div class="col-sm-12">
+      <% @articles.each do |article| -%>
+        <%= link_to admin_article_path(article) do %>
+          <div class="h2">
+            <%= article.title %>
+          </div>
+
+          <p>
+            <%= article.short_description %>
+          </p>
+
+          <span class="publishdate_admin" itemprop="datePublished">
+            <%= l(article.created_at, :format => '%d %B %Y') %>
+          </span>
+          <br>
+          <%= link_to "Edit", edit_admin_article_path(article), class: "admin_article_edit" %>
+          |
+          <%= link_to "Delete", admin_article_path(article), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete" %>
+          |
+          <% if article.active? %>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+          <% else %>
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          <% end %>
+          |
+          <% if article.pdf? %>
+            PDF
+          <% end %>
+
+          <hr>
+        <% end %>
+
+      <% end %>
+    </div>
+  </div>
+</section>
