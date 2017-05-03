@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
     <!-- Begin MailChimp Signup Form -->
     <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
     <!--End mc_embed_signup-->
@@ -44,76 +46,77 @@
 
     <nav>
       <div class="navbar top_nav padding_top_20px padding_bottom_20px">
-        <div class="container">
 
-          <div class="col-sm-12 no_side_padding">
-            <div class="col-sm-4 padding_left_60px top_nav_left">
-              <span class="inline_block vcenter">
-                <%= link_to root_url do %>
-                  <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image") %>
-                <% end %>
-              </span>
+        <div class="col-sm-12 no_side_padding">
+          <div class="col-sm-4 padding_left_60px top_nav_left">
+            <span class="inline_block vcenter">
+              <%= link_to root_url do %>
+                <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image") %>
+              <% end %>
+            </span>
 
-              <!-- <span class="inline_block top_nav_logo_text">
-                AdCom Designs
-              </span> -->
-            </div>
-
-            <div class="col-sm-8 padding_top_25px padding_right_30px menu_container">
-              <ul class="list-inline pull-right top_nav_list">
-                <li>
-                  <a href="#" class="top_nav_link">About us</a>
-                </li>
-
-                <li>
-                  <a href="#" class="top_nav_link">Portfolio</a>
-                </li>
-
-                <li>
-                  <a href="#" class="top_nav_link active">Contact</a>
-                </li>
-              </ul>
-            </div>
+            <!-- <span class="inline_block top_nav_logo_text">
+              AdCom Designs
+            </span> -->
           </div>
 
-          <div class="col-sm-12 navbar_toogle_container mobile_width_100 text-center mobile_padding_top_10px">
-            <div class="btn-group">
-              <button type="button" class="navbar-toggle collapsed margin_top_0px" data-toggle="collapse" data-target="#navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-          </div>
-
-          <div id="navbar-collapse" class="col-sm-12 text-center mobile_menu_container collapse navbar-collapse mobile_width_100">
-
-            <button type="button" class="navbar-toggle margin_top_0px cross_toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
-              <i class="fa fa-times font_size_44px" aria-hidden="true"></i>
-            </button>
-
-            <ul class="nav navbar-nav navbar-list font_size_16px">
-              <li class="padding_top_10px">
-                <a href="#">
-                  About us
-                </a>
+          <div class="col-sm-8 padding_top_25px padding_right_30px menu_container">
+            <ul class="list-inline pull-right top_nav_list">
+              <li>
+                <a href="#" class="top_nav_link">AdCom Designs</a>
               </li>
 
-              <li class="padding_top_10px">
-                <a href="#">
-                  Portfolio
-                </a>
+              <li>
+                <a href="#" class="top_nav_link">Write it Well</a>
               </li>
 
-              <li class="padding_top_10px">
-                <a href="#">
-                  Contact
-                </a>
+              <li>
+                <a href="#" class="top_nav_link">Portfolio</a>
+              </li>
+
+              <li>
+                <a href="#contact_us" class="top_nav_link active">Contact</a>
               </li>
             </ul>
           </div>
+        </div>
 
+        <div class="col-sm-12 navbar_toogle_container mobile_width_100 text-center mobile_padding_top_10px">
+          <div class="btn-group">
+            <button type="button" class="navbar-toggle collapsed margin_top_0px" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+
+        <div id="navbar-collapse" class="col-sm-12 text-center mobile_menu_container collapse navbar-collapse mobile_width_100">
+
+          <button type="button" class="navbar-toggle margin_top_0px cross_toggle" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="true">
+            <i class="fa fa-times font_size_44px" aria-hidden="true"></i>
+          </button>
+
+          <ul class="nav navbar-nav navbar-list font_size_16px">
+            <li class="padding_top_10px">
+              <a href="#">
+                About us
+              </a>
+            </li>
+
+            <li class="padding_top_10px">
+              <a href="#">
+                Portfolio
+              </a>
+            </li>
+
+            <li class="padding_top_10px">
+              <a href="#contact_us">
+                Contact
+              </a>
+            </li>
+          </ul>
         </div>
 
         <div class="clearfix"></div>
@@ -142,6 +145,8 @@
     </script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   </body>
 </html>

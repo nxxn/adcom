@@ -40,7 +40,8 @@ body {
 
 .top_nav_link:hover, .top_nav_link:focus {
   text-decoration: none;
-  color: #fff;
+  color: #333;
+  outline: none;
 }
 
 .top_nav_link.active {
@@ -220,6 +221,17 @@ body {
   color: #333;
 }
 
+.transparent_button {
+  background: transparent;
+  color: #333;
+  border-color: #333;
+}
+
+.transparent_button:hover, .transparent_button:focus {
+  background: #333;
+  color: #fff;
+}
+
 .big_title {
   font-size: 46px;
   font-weight: 600;
@@ -273,6 +285,20 @@ body {
   color: #777;
 }
 
+.slick-track:focus, .portolio_item_container:focus, .slider_item:focus {
+  outline: none;
+}
+
+.portfolio_slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonial_slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
 .slider_item {
   width: 100%;
   position: relative;
@@ -286,6 +312,8 @@ body {
 }
 
 .slider_arrow {
+  display: flex !important;
+  justify-content: center;
   width: 50px;
   height: 50px;
   position: absolute;
@@ -294,6 +322,7 @@ body {
   line-height: 50px;
   transition: all 0.2s linear;
   cursor: pointer;
+  z-index: 100;
 }
 
 .slider_arrow:hover, .slider_arrow:focus {
@@ -301,11 +330,19 @@ body {
 }
 
 .slider_left_arrow {
-  left: 0;
+  left: -60px;
 }
 
 .slider_right_arrow {
-  right: 0;
+  right: -60px;
+}
+
+.testimonial_left_arrow {
+  left: -20px;
+}
+
+.testimonial_right_arrow {
+  right: -20px;
 }
 
 .slider_item_image {
@@ -400,7 +437,7 @@ body {
 }
 
 .socials_block_overlay {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -488,7 +525,7 @@ body {
 }
 
 .portolio_item_container {
-  display: flex;
+  display: flex !important;
   align-items: center;
 }
 
@@ -545,4 +582,46 @@ body {
 .who_we_are_video_block_button {
   font-size: 16px;
   padding: 15px 30px;
+}
+
+.adcom_wiw_block {
+  background: transparent asset-data-url('case-study-default-image.jpg') top center no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 900px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.white_box {
+  width: 600px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adcom_block {
+  padding: 100px 50px;
+  margin-top: -250px;
+}
+
+.wiw_block {
+  padding: 100px 50px;
+}
+
+.white_overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }

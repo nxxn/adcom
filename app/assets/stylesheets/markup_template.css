@@ -620,6 +620,12 @@
   display: inline-block;
 }
 
+.justify_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1200px) {
   .mobile_padding_top_0px {
     padding-top: 0px !important;
