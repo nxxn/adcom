@@ -1,30 +1,10 @@
 class HomeController < ApplicationController
 
-  layout 'new_design', only: [:new_homepage]
+  layout 'new_design', only: [:new_homepage, :write_it_well, :adcomdesigns]
 
   def index
     @article = Article.last
 
-    @message = Message.new
-  end
-
-  def clients
-  end
-
-  def services
-  end
-
-  def about
-  end
-
-  def contact
-    @message = Message.new
-  end
-
-  def writeitwell
-  end
-
-  def new_homepage
     @message = Message.new
   end
 

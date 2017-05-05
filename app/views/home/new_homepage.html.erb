@@ -96,7 +96,7 @@
               </span>
 
               <span class="block text-center padding_top_50px">
-                <a href="#" class="inline_block button_template transparent_button">
+                <a href="/adcomdesigns" class="inline_block button_template transparent_button">
                   Learn more
                 </a>
               </span>
@@ -128,7 +128,7 @@
               </span>
 
               <span class="block text-center padding_top_50px">
-                <a href="#" class="inline_block button_template transparent_button">
+                <a href="/write_it_well" class="inline_block button_template transparent_button">
                   Learn more
                 </a>
               </span>
@@ -163,7 +163,7 @@
   </div>
 </section>
 
-<section class="padding_top_70px padding_bottom_70px">
+<section id="portfolio" class="padding_top_70px padding_bottom_70px">
   <div class="container">
     <div class="col-sm-12 no_side_padding padding_bottom_70px">
       <span class="block big_title">Training Case Studies</span>
@@ -475,94 +475,6 @@
           <%= image_tag "ps.jpg", class: "img-responsive clients_logo" %>
         </li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact_us" class="padding_top_70px padding_bottom_70px top_block_border">
-  <div class="container">
-    <div class="col-sm-12 no_side_padding contacts_form_container">
-      <div class="col-sm-6">
-        <div class="col-sm-12 no_side_padding">
-          <span class="block big_title textalign-left">Drop Us A Line</span>
-
-          <span class="block text-center testimonial_subtitle padding_top_20px textalign-left">
-            We welcome you to contact us for more information
-            <br>
-            about any of our products or services.
-          </span>
-        </div>
-
-        <div class="col-sm-12 no_side_padding padding_top_50px">
-          <%= form_for @message, :url => message_path do |f| %>
-            <div class="form-group">
-              <label for="message_name" class="contacts_label">Your Name (required)</label>
-              <input type="text" name="message[name]" class="form-control contacts_input" id="message_name">
-            </div>
-
-            <div class="form-group padding_top_10px">
-              <label for="message_email" class="contacts_label">Your Email (required)</label>
-              <input type="email" name="message[email]" class="form-control contacts_input" id="message_email">
-            </div>
-
-            <div class="form-group padding_top_10px">
-              <label for="message_phone" class="contacts_label">Phone number</label>
-              <input type="text" name="message[phone]" class="form-control contacts_input" id="message_phone">
-            </div>
-
-            <div class="form-group padding_top_10px">
-              <label for="message_message" class="contacts_label">Your question (required)</label>
-              <textarea class="form-control contacts_input" rows="5" name="message[message]" id="message_message" style="height: 110px;"></textarea>
-            </div>
-
-            <button type="submit" class="send_message_submit see_all_button green_background margin_top_15px">Send</button>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="col-sm-12 no_side_padding text-center">
-          <span class="block">
-            <%= image_tag("location.png", class: "contacts_location_icon") %>
-          </span>
-
-          <span class="block contacts_location_title">
-            Visit us
-          </span>
-
-          <span class="block contacts_location_text">
-             San Francisco Bay Area
-          </span>
-        </div>
-
-        <div class="col-sm-12 no_side_padding padding_top_70px text-center">
-          <span class="block">
-            <%= image_tag("mail.png", class: "contacts_location_icon") %>
-          </span>
-
-          <span class="block contacts_location_title">
-            Mail us
-          </span>
-
-          <span class="block contacts_location_text">
-            natasha@adcomdesigns.com
-          </span>
-        </div>
-
-        <div class="col-sm-12 no_side_padding padding_top_70px text-center">
-          <span class="block">
-            <%= image_tag("phone.png", class: "contacts_location_icon") %>
-          </span>
-
-          <span class="block contacts_location_title">
-            Call us
-          </span>
-
-          <span class="block contacts_location_text">
-            (510) 655-6477
-          </span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
