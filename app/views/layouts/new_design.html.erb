@@ -63,19 +63,19 @@
           <div class="col-sm-8 padding_top_25px padding_right_30px menu_container">
             <ul class="list-inline pull-right top_nav_list">
               <li>
-                <a href="/adcomdesigns" class="top_nav_link">AdCom Designs</a>
+                <%= link_to "AdCom Designs", adcomdesigns_path, class: "top_nav_link" %>
               </li>
 
               <li>
-                <a href="/write_it_well" class="top_nav_link">Write it Well</a>
+                <%= link_to "Write it Well", write_it_well_path, class: "top_nav_link" %>
               </li>
 
               <li>
-                <a href="#portfolio" class="top_nav_link">Portfolio</a>
+                <%= link_to "Portfolio", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
               </li>
 
               <li>
-                <a href="#contact_us" class="top_nav_link active">Contact</a>
+                <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link active" %>
               </li>
             </ul>
           </div>
@@ -100,23 +100,19 @@
 
           <ul class="nav navbar-nav navbar-list font_size_16px">
             <li class="padding_top_10px">
-              <a href="/adcomdesigns" class="top_nav_link">AdCom Designs</a>
+              <%= link_to "AdCom Designs", adcomdesigns_path, class: "top_nav_link" %>
             </li>
 
             <li class="padding_top_10px">
-              <a href="/write_it_well" class="top_nav_link">Write it Well</a>
+              <%= link_to "Write it Well", write_it_well_path, class: "top_nav_link" %>
             </li>
 
             <li class="padding_top_10px">
-              <a href="#portfolio">
-                Portfolio
-              </a>
+              <%= link_to "Portfolio", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
             </li>
 
             <li class="padding_top_10px">
-              <a href="#contact_us">
-                Contact
-              </a>
+              <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link active" %>
             </li>
           </ul>
         </div>

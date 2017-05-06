@@ -17,95 +17,95 @@
 }
 
 .font_size_12px {
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .font_size_13px {
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 .font_size_14px {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .font_size_15px {
-  font-size: 15px;
+  font-size: 15px !important;
 }
 
 .font_size_16px {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 .font_size_17px {
-  font-size: 17px;
+  font-size: 17px !important;
 }
 
 .font_size_18px {
-  font-size: 18px;
+  font-size: 18px !important;
 }
 
 .font_size_20px {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 
 .font_size_22px {
-  font-size: 22px;
+  font-size: 22px !important;
 }
 
 .font_size_24px {
-  font-size: 24px;
+  font-size: 24px !important;
 }
 
 .font_size_26px {
-  font-size: 26px;
+  font-size: 26px !important;
 }
 
 .font_size_30px {
-  font-size: 30px;
+  font-size: 30px !important;
 }
 
 .font_size_32px {
-  font-size: 32px;
+  font-size: 32px !important;
 }
 
 .font_size_36px {
-  font-size: 36px;
+  font-size: 36px !important;
 }
 
 .font_size_40px {
-  font-size: 40px;
+  font-size: 40px !important;
 }
 
 .font_size_44px {
-  font-size: 44px;
+  font-size: 44px !important;
 }
 
 .font_size_48px {
-  font-size: 48px;
+  font-size: 48px !important;
 }
 
 .font_size_50px {
-  font-size: 50px;
+  font-size: 50px !important;
 }
 
 .font_size_55px {
-  font-size: 55px;
+  font-size: 55px !important;
 }
 
 .font_size_60px {
-  font-size: 60px;
+  font-size: 60px !important;
 }
 
 .font_size_70px {
-  font-size: 70px;
+  font-size: 70px !important;
 }
 
 .font_size_100px {
-  font-size: 100px;
+  font-size: 100px !important;
 }
 
 .font_size_120px {
-  font-size: 120px;
+  font-size: 120px !important;
 }
 
 .font_weight_light {
@@ -844,4 +844,8 @@
     height: 260px;
     min-height: 260px;
   }
+}
+
+.text-left {
+  text-align: left !important;
 }

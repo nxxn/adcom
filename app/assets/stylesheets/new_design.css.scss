@@ -718,3 +718,23 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+
+.adcom_about_list {
+
+}
+
+.adcom_about_list li {
+  list-style: none;
+  padding-top: 30px;
+  font-size: 18px;
+}
+
+.adcom_about_container {
+  display: flex;
+}
+
+.adcom_about_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
