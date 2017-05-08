@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  layout 'new_design'
+
   def index
     @articles = Article.where(active: true).order("created_at DESC")
   end

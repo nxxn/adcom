@@ -8,6 +8,10 @@ class HomeController < ApplicationController
     @message = Message.new
   end
 
+  def new_homepage
+    @articles = Article.order("created_at DESC").limit(6)
+  end
+
   def create
     @message = Message.new(params[:message])
 

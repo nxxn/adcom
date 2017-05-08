@@ -1,4 +1,4 @@
-<section class="home_big_cover">
+<!-- <section class="home_big_cover">
   <div class="home_big_cover_overlay"></div>
 
   <div class="container">
@@ -36,4 +36,57 @@
       <% end %>
     </div>
   </section>
-<% end %>
+<% end %> -->
+
+
+<section class="news_section padding_top_50px padding_bottom_70px top_block_border fixed_menu_margin">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding">
+      <span class="block big_title">
+        Latest News
+      </span>
+    </div>
+
+    <% @articles.each_slice(2) do |slice| %>
+
+      <div class="col-sm-12 no_side_padding padding_top_70px">
+
+        <% slice.each_with_index do |article, index| %>
+          <div class="col-sm-6 <%= index.even? ? 'padding_left_0px padding_right_50px' : 'padding_left_50px padding_right_0px' %>">
+            <div class="col-sm-12 no_side_padding">
+              <span class="inline_block article_date">
+                <span class="block article_date_day">
+                  <%= l(article.created_at, :format => '%d') %>
+                </span>
+                <span class="block article_date_month_year">
+                  <%= l(article.created_at, :format => '%^b %Y') %>
+                </span>
+              </span>
+              <span class="inline_block article_title">
+                <%= article.title %>
+              </span>
+            </div>
+
+            <div class="col-sm-12 no_side_padding article_text_container padding_top_20px">
+              <%= article.short_description %>
+            </div>
+
+            <div class="col-sm-12 no_side_padding padding_top_20px text-right">
+              <%= link_to article_path(article), class: "article_read_more" do %>
+                Read more
+                <i class="fa fa-chevron-circle-right"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+
+      </div>
+
+    <% end %>
+
+    <div class="col-sm-12 text-center padding_top_50px">
+      <%= link_to "Go to full list", articles_path, class: "inline_block button_template transparent_button" %>
+    <div>
+
+  </div>
+</section>
