@@ -1,32 +1,34 @@
-<section>
+<section class="top_full_block">
   <div class="container">
-    <div class="col-sm-12">
-      <h2>Log in</h2>
+    <div class="col-sm-12 text-center">
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true %>
-        </div>
+      <div class="btn-group">
+        <span class="block big_title">Log in</span>
 
-        <div class="field">
-          <%= f.label :password %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-
-        <% if devise_mapping.rememberable? -%>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "padding_top_30px" }) do |f| %>
           <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :remember_me %>
+            <%= f.label :email, class: "font_size_20px font_weight_semi_bold" %><br />
+            <%= f.email_field :email, autofocus: true, class: "log_in_input" %>
           </div>
-        <% end -%>
 
-        <div class="actions">
-          <%= f.submit "Log in" %>
-        </div>
-      <% end %>
+          <div class="field padding_top_20px">
+            <%= f.label :password, class: "font_size_20px font_weight_semi_bold" %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "log_in_input" %>
+          </div>
 
-      <%= render "devise/shared/links" %>
+          <% if devise_mapping.rememberable? -%>
+            <div class="field padding_top_20px">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me, class: "font_size_16px font_weight_semi_bold" %>
+            </div>
+          <% end -%>
+
+          <div class="actions padding_top_40px padding_bottom_20px">
+            <%= f.submit "Log in", class: "button_template transparent_button" %>
+          </div>
+        <% end %>
+      </div>
+
     </div>
   </div>
 </section>

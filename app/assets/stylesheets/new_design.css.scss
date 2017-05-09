@@ -822,3 +822,23 @@ body {
 .article_show_text {
   font-size: 18px;
 }
+
+.sign_in_links a {
+  color: #333;
+}
+
+.sign_in_links a:hover, .sign_in_links a:focus {
+  color: #333;
+  text-decoration: none;
+  outline: none;
+}
+
+.log_in_input {
+  height: 42px;
+  width: 250px;
+  border: 1px solid #9c9c9c;
+}
+
+.log_in_input:focus {
+  outline: none;
+}
