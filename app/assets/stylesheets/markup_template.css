@@ -782,6 +782,11 @@
     float: left !important;
   }
 
+  .mobile_width_50 {
+    width: 50% !important;
+    float: left !important;
+  }
+
   .mobile_width_66 {
     width: 66% !important;
     float: left !important;
@@ -839,6 +844,10 @@
 
   .mobile_margin_top_50px {
     margin-top: 50px !important;
+  }
+
+  .mobile_margin_left_0px {
+    margin-left: 0px !important;
   }
 
   .mobile_margin_left_10px {

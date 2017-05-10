@@ -50,14 +50,14 @@
         <div class="col-sm-12 no_side_padding">
           <div class="col-sm-4 padding_left_60px top_nav_left mobile_padding_left_right_15px mobile_width_100">
             <span class="inline_block vcenter mobile_width_100">
-              <%= link_to root_url, class: "mobile_width_100 mobile_text_center" do %>
-                <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image mobile_center_image") %>
+              <%= link_to root_url, class: "mobile_width_50 mobile_text_center" do %>
+                <%= image_tag("adcom_color_logo_square.png", alt: "AdCom logo", class: "top_nav_logo_image mobile_center_image") %>
+              <% end %>
+
+              <%= link_to root_url, class: "mobile_width_50 mobile_text_center margin_left_30px mobile_margin_left_0px mobile_margin_top_10px" do %>
+                <%= image_tag("wiw_logo_square.png", alt: "WiW logo", class: "top_nav_logo_image mobile_center_image") %>
               <% end %>
             </span>
-
-            <!-- <span class="inline_block top_nav_logo_text">
-              AdCom Designs
-            </span> -->
           </div>
 
           <div class="col-sm-8 padding_top_25px padding_right_30px menu_container">
@@ -71,7 +71,7 @@
               </li>
 
               <li>
-                <%= link_to "Portfolio", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
+                <%= link_to "Case Studies", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
               </li>
 
               <li>
@@ -79,7 +79,7 @@
               </li>
 
               <li>
-                <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link active" %>
+                <%= link_to "Contact", new_homepage_path(anchor: "contact_us"), class: "top_nav_link active" %>
               </li>
             </ul>
           </div>
@@ -112,7 +112,7 @@
             </li>
 
             <li class="padding_top_20px">
-              <%= link_to "Portfolio", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
+              <%= link_to "Case Studies", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
             </li>
 
             <li class="padding_top_20px">
@@ -120,7 +120,7 @@
             </li>
 
             <li class="padding_top_20px">
-              <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link" %>
+              <%= link_to "Contact", new_homepage_path(anchor: "contact_us"), class: "top_nav_link" %>
             </li>
           </ul>
         </div>
@@ -138,7 +138,7 @@
           <div class="col-sm-12 no_side_padding contacts_form_container mobile_block">
             <div class="col-sm-6">
               <div class="col-sm-12 no_side_padding">
-                <span class="block big_title textalign-left">Drop Us A Line</span>
+                <span class="block big_title textalign-left">Get Connected</span>
 
                 <span class="block text-center testimonial_subtitle padding_top_20px textalign-left">
                   We welcome you to contact us for more information
@@ -278,7 +278,7 @@
             </span>
 
             <span class="block padding_top_20px">
-              <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "footer_link" %>
+              <%= link_to "Contact", new_homepage_path(anchor: "contact_us"), class: "footer_link" %>
             </span>
           </div>
 

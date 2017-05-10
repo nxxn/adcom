@@ -290,7 +290,7 @@ body {
 
 .who_we_are_container {
   display: flex;
-  align-items: center;
+  // align-items: center;
 }
 
 .who_we_are_quotation {
@@ -958,4 +958,9 @@ body {
     height: 3px;
     background-color: #333 !important;
   }
+}
+
+.about_us_nt_photo {
+  max-height: 250px;
+  border-radius: 50%;
 }
