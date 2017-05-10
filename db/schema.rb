@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160308161052) do
+ActiveRecord::Schema.define(version: 20170509012753) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title",                 limit: 255,   default: ""
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(version: 20160308161052) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "clients", force: :cascade do |t|
+    t.string   "title",                   limit: 255,   default: ""
+    t.text     "description",             limit: 65535
+    t.string   "department",              limit: 255,   default: ""
+    t.string   "work_image_file_name",    limit: 255
+    t.string   "work_image_content_type", limit: 255
+    t.integer  "work_image_file_size",    limit: 4
+    t.datetime "work_image_updated_at"
+    t.datetime "created_at",                                         null: false
+    t.datetime "updated_at",                                         null: false
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
     t.integer  "sluggable_id",   limit: 4,   null: false
@@ -58,6 +70,18 @@ ActiveRecord::Schema.define(version: 20160308161052) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
+
+  create_table "testimonials", force: :cascade do |t|
+    t.string   "full_name",                 limit: 255,   default: ""
+    t.text     "review_text",               limit: 65535
+    t.string   "client_title",              limit: 255,   default: ""
+    t.string   "client_image_file_name",    limit: 255
+    t.string   "client_image_content_type", limit: 255
+    t.integer  "client_image_file_size",    limit: 4
+    t.datetime "client_image_updated_at"
+    t.datetime "created_at",                                           null: false
+    t.datetime "updated_at",                                           null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

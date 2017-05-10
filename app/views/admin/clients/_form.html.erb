@@ -1,0 +1,26 @@
+<div class="col-sm-12 text-center">
+  <div class="btn-group text-left">
+    <div class="text-left">
+      <%= link_to "Back", admin_clients_path, class: "admin_article_back" %>
+    </div>
+
+    <br><br>
+
+    <%= simple_form_for [:admin, @client] do |f| %>
+
+      <%= f.input :title, label: "Client title"  %>
+      <%= f.input :department, label: "Type of completed work"  %>
+      <%= f.input :description, :as => :ckeditor, label: "Description", :input_html => { :ckeditor => {:toolbar => 'Full', height: 600, width: 920} } %>
+
+      <% if @client.work_image.present? %>
+        <%= image_tag @client.work_image.url, alt: "Client logo", class: "portfolio_logo margin_top_20px margin_bottom_20px" %>
+      <% end %>
+
+      <%= f.input :work_image, as: :file, label: "Client logo" %>
+
+      <%= f.submit "Save", class: "btn btn-default btn-success" %>
+
+    <% end %>
+
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="col-sm-12 text-center">
+  <div class="btn-group text-left">
+    <div class="text-left">
+      <%= link_to "Back", admin_testimonials_path, class: "admin_article_back" %>
+    </div>
+
+    <br><br>
+
+    <%= simple_form_for [:admin, @testimonial] do |f| %>
+
+      <%= f.input :full_name, label: "Client full name"  %>
+      <%= f.input :client_title, label: "Client position"  %>
+      <%= f.input :review_text, :as => :ckeditor, label: "Description", :input_html => { :ckeditor => {:toolbar => 'Full', height: 600, width: 920} } %>
+
+      <% if @testimonial.client_image.present? %>
+        <%= image_tag @testimonial.client_image.url(:medium), alt: "Client profile image", class: "slider_item_image margin_top_20px margin_bottom_20px" %>
+      <% end %>
+
+      <%= f.input :client_image, as: :file, label: "Client profile image" %>
+
+      <%= f.submit "Save", class: "btn btn-default btn-success" %>
+
+    <% end %>
+
+  </div>
+</div>

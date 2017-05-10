@@ -1,41 +1,51 @@
-<section class="admin_articles_list">
+<section class="padding_top_50px padding_bottom_70px">
   <div class="container">
-    <div class="col-md-12">
-      <%= link_to "New Article", new_admin_article_path, class: "new_article_link btn btn-default" %>
+    <div class="col-sm-12 no_side_padding">
+      <%= link_to "New Article", new_admin_article_path, class: "new_article_link btn btn-default  white_text btn btn-success" %>
     </div>
-    <div class="col-sm-12">
-      <% @articles.each do |article| -%>
-        <%= link_to admin_article_path(article) do %>
-          <div class="h2">
-            <%= article.title %>
+
+    <% @articles.each_slice(2) do |slice| %>
+
+      <div class="col-sm-12 no_side_padding padding_top_70px">
+
+        <% slice.each_with_index do |article, index| %>
+          <div class="col-sm-6 <%= index.even? ? 'padding_left_0px padding_right_50px' : 'padding_left_50px padding_right_0px' %>">
+            <div class="col-sm-12 no_side_padding">
+              <span class="inline_block article_date">
+                <span class="block article_date_day">
+                  <%= l(article.created_at, :format => '%d') %>
+                </span>
+                <span class="block article_date_month_year">
+                  <%= l(article.created_at, :format => '%^b %Y') %>
+                </span>
+              </span>
+              <span class="inline_block article_title_list">
+                <%= article.title %>
+              </span>
+            </div>
+
+            <div class="col-sm-12 no_side_padding article_text_container padding_top_20px">
+              <%= article.short_description %>
+            </div>
+
+            <div class="col-sm-12 no_side_padding padding_top_20px text-right">
+              <%= link_to article_path(article), class: "article_read_more" do %>
+                Read more
+                <i class="fa fa-chevron-circle-right"></i>
+              <% end %>
+            </div>
+
+            <div class="col-sm-12 padding_top_40px padding_left_right_50px padding_bottom_50px text-center">
+              <div class="center-block">
+                <%= link_to "Edit", edit_admin_article_path(article), class: "admin_article_edit white_text btn btn-warning" %>
+                <%= link_to "Delete", admin_article_path(article), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete white_text btn btn-danger margin_left_20px" %>
+              </div>
+            </div>
           </div>
-
-          <p>
-            <%= article.short_description %>
-          </p>
-
-          <span class="publishdate_admin" itemprop="datePublished">
-            <%= l(article.created_at, :format => '%d %B %Y') %>
-          </span>
-          <br>
-          <%= link_to "Edit", edit_admin_article_path(article), class: "admin_article_edit" %>
-          |
-          <%= link_to "Delete", admin_article_path(article), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete" %>
-          |
-          <% if article.active? %>
-            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-          <% else %>
-            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-          <% end %>
-          |
-          <% if article.pdf? %>
-            PDF
-          <% end %>
-
-          <hr>
         <% end %>
 
-      <% end %>
-    </div>
+      </div>
+
+    <% end %>
   </div>
 </section>

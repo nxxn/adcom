@@ -29,7 +29,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse admin_navbar">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -40,12 +40,11 @@
         </button>
         <%= link_to "Adcom Designs", admin_root_url, class: "navbar-brand" %>
       </div>
-      <div id="navbar" class="navbar-collapse collapse">
+      <div id="navbar" class="admin_navbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="<%= admin_root_path %>">Articles</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-
+          <li><a href="<%= admin_articles_path %>">News</a></li>
+          <li><a href="<%= admin_clients_path %>">Clients</a></li>
+          <li><a href="<%= admin_testimonials_path %>">Testimonials</a></li>
         </ul>
       </div>
     </div>

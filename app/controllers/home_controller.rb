@@ -4,12 +4,12 @@ class HomeController < ApplicationController
 
   def index
     @article = Article.last
-
-    @message = Message.new
   end
 
   def new_homepage
-    @articles = Article.order("created_at DESC").limit(6)
+    @articles = Article.order("created_at DESC").limit(4)
+    @clients = Client.order("created_at DESC")
+    @testimonials = Testimonial.order("created_at DESC")
   end
 
   def create

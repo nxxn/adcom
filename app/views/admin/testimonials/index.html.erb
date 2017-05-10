@@ -1,0 +1,37 @@
+<section class="admin_articles_list">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding padding_bottom_50px">
+      <%= link_to "New Testimonial", new_admin_testimonial_path, class: "new_article_link white_text btn btn-success" %>
+    </div>
+
+    <% @testimonials.each do |testimonial| %>
+      <div class="col-sm-12 slider_item admin_item_container padding_top_50px">
+
+        <span class="block slider_item_image_container">
+          <%= image_tag(testimonial.client_image.url(:medium), class: "slider_item_image center_image") %>
+        </span>
+
+        <span class="block slider_item_text padding_top_30px">
+          <%= testimonial.review_text.html_safe %>
+        </span>
+
+        <span class="block slider_item_name padding_top_20px">
+          <%= testimonial.full_name %>
+        </span>
+
+        <span class="block slider_item_company padding_top_5px">
+          <%= testimonial.client_title %>
+        </span>
+
+      </div>
+
+      <div class="col-sm-12 padding_top_40px padding_left_right_50px padding_bottom_50px text-center">
+        <div class="center-block">
+          <%= link_to "Edit", edit_admin_testimonial_path(testimonial), class: "admin_article_edit white_text btn btn-warning" %>
+          <%= link_to "Delete", admin_testimonial_path(testimonial), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete white_text btn btn-danger margin_left_20px" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</section>

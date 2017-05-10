@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :users
-  
+
   get '/clients', to: 'home#clients'
   get '/services', to: 'home#services'
   get '/about', to: 'home#about'
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
     root to: "articles#index"
 
     resources :articles
+    resources :clients
+    resources :testimonials
   end
 
   root 'home#index'

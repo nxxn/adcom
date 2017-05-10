@@ -52,6 +52,12 @@ class Devise::SessionsController < DeviseController
     'devise.sessions'
   end
 
+  def set_flash_message!(key, kind, options = {})
+    if is_flashing_format?
+      set_flash_message(key, kind, options)
+    end
+  end
+
   private
 
   # Check if there is no signed in user before doing the sign out.

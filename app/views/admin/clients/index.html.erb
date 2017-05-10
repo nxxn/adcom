@@ -1,0 +1,35 @@
+<section class="admin_articles_list">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding padding_bottom_50px">
+      <%= link_to "New Client", new_admin_client_path, class: "new_article_link white_text btn btn-success" %>
+    </div>
+
+    <% @clients.each do |client| %>
+      <div class="col-sm-12 portolio_item_container no_side_padding padding_top_50px admin_item_container">
+        <div class="col-sm-3">
+          <span class="block portolio_item_logo">
+            <%= image_tag client.work_image.url, class: "img-responsive portfolio_logo center_image" %>
+          </span>
+        </div>
+
+        <div class="col-sm-9">
+          <span class="block portfolio_item_name"><%= client.title %></span>
+
+          <span class="block portfolio_item_short_desc"><%= client.department %></span>
+
+          <span class="block portfolio_item_long_desc">
+            <%= client.description.html_safe %>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-sm-12 padding_top_40px padding_left_right_50px padding_bottom_50px text-center">
+        <div class="center-block">
+          <%= link_to "Edit", edit_admin_client_path(client), class: "admin_article_edit white_text btn btn-warning" %>
+          <%= link_to "Delete", admin_client_path(client), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete white_text btn btn-danger margin_left_20px" %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</section>

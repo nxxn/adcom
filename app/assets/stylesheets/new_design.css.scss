@@ -627,6 +627,10 @@ body {
   max-height: 130px;
 }
 
+.admin_portfolio_logo {
+  max-height: 90px;
+}
+
 .top_block_border {
   border-top: 1px solid #e6e6e6;
   -webkit-box-shadow: inset 0px 30px 16px -30px rgba(230,230,230,1);
@@ -780,7 +784,7 @@ body {
   font-size: 14px;
 }
 
-.article_title {
+.article_title_list {
   width: calc(100% - 85px);
   float: left;
   color: #333;
@@ -841,4 +845,26 @@ body {
 
 .log_in_input:focus {
   outline: none;
+}
+
+.admin_navbar ul li {
+  margin: 15px;
+}
+
+.admin_navbar ul li a {
+  text-transform: uppercase;
+  line-height: 20px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-style: normal;
+  color: #222;
+  font-size: 14px;
+}
+
+.admin_item_container {
+  border-top: 1px solid #d4d4d4;
+}
+
+.admin_navbar {
+  border-radius: 0px;
 }
