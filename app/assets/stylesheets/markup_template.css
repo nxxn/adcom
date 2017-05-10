@@ -6,7 +6,7 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .show_on_desktop {
     display: none !important;
   }
@@ -635,7 +635,7 @@
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
   .mobile_padding_top_0px {
     padding-top: 0px !important;
   }
@@ -821,6 +821,10 @@
     max-height: 300px;
   }
 
+  .mobile_max_height_80px {
+    max-height: 80px !important;
+  }
+
   .agency_signup_form .form-group {
     padding: 10px 5px 0 5px;
   }
@@ -845,9 +849,24 @@
     margin-top: 80px;
   }
 
-  .project_job {
-    height: 260px;
-    min-height: 260px;
+  .mobile_block {
+    display: block !important;
+  }
+
+  .portfolio_logos_list li {
+    margin-top: 10px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .container {
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 768px) {
+  .small_mobile_padding_top_30px {
+    padding-top: 30px !important;
   }
 }
 

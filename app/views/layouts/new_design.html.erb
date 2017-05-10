@@ -48,10 +48,10 @@
       <div class="navbar top_nav padding_top_20px padding_bottom_20px <%= params[:action] == 'new_homepage' ? 'top_nav' : '' %>">
 
         <div class="col-sm-12 no_side_padding">
-          <div class="col-sm-4 padding_left_60px top_nav_left">
-            <span class="inline_block vcenter">
-              <%= link_to root_url do %>
-                <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image") %>
+          <div class="col-sm-4 padding_left_60px top_nav_left mobile_padding_left_right_15px mobile_width_100">
+            <span class="inline_block vcenter mobile_width_100">
+              <%= link_to root_url, class: "mobile_width_100 mobile_text_center" do %>
+                <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image mobile_center_image") %>
               <% end %>
             </span>
 
@@ -85,9 +85,9 @@
           </div>
         </div>
 
-        <div class="col-sm-12 navbar_toogle_container mobile_width_100 text-center mobile_padding_top_10px">
+        <div class="col-sm-12 navbar_toogle_container mobile_width_100 text-center mobile_padding_top_30px">
           <div class="btn-group">
-            <button type="button" class="navbar-toggle collapsed margin_top_0px" data-toggle="collapse" data-target="#navbar-collapse">
+            <button type="button" class="navbar-toggle new_navbar_toogle collapsed margin_top_0px" data-toggle="collapse" data-target="#navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -103,24 +103,24 @@
           </button>
 
           <ul class="nav navbar-nav navbar-list font_size_16px">
-            <li class="padding_top_10px">
+            <li class="">
               <%= link_to "AdCom Designs", adcomdesigns_path, class: "top_nav_link" %>
             </li>
 
-            <li class="padding_top_10px">
+            <li class="padding_top_20px">
               <%= link_to "Write it Well", write_it_well_path, class: "top_nav_link" %>
             </li>
 
-            <li class="padding_top_10px">
+            <li class="padding_top_20px">
               <%= link_to "Portfolio", new_homepage_path(anchor: "portfolio"), class: "top_nav_link" %>
             </li>
 
-            <li class="padding_top_10px">
+            <li class="padding_top_20px">
               <%= link_to "News", articles_path, class: "top_nav_link" %>
             </li>
 
-            <li class="padding_top_10px">
-              <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link active" %>
+            <li class="padding_top_20px">
+              <%= link_to "Contacts", new_homepage_path(anchor: "contact_us"), class: "top_nav_link" %>
             </li>
           </ul>
         </div>
@@ -135,7 +135,7 @@
 
       <section id="contact_us" class="padding_top_70px padding_bottom_70px top_block_border">
         <div class="container">
-          <div class="col-sm-12 no_side_padding contacts_form_container">
+          <div class="col-sm-12 no_side_padding contacts_form_container mobile_block">
             <div class="col-sm-6">
               <div class="col-sm-12 no_side_padding">
                 <span class="block big_title textalign-left">Drop Us A Line</span>
@@ -174,7 +174,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-6 show_on_desktop">
               <div class="col-sm-12 no_side_padding text-center">
                 <span class="block">
                   <%= image_tag("location.png", class: "contacts_location_icon") %>
@@ -220,13 +220,13 @@
           </div>
         </div>
       </section>
-      
+
     <% end %>
 
     <section class="new_footer">
       <div class="container">
-        <div class="col-sm-12 no_side_padding footer_blocks_container">
-          <div class="col-sm-4">
+        <div class="col-sm-12 no_side_padding footer_blocks_container mobile_block">
+          <div class="col-sm-4 mobile_width_100 mobile_text_center">
             <span class="block">
               <%= link_to root_url do %>
                 <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image") %>
@@ -264,7 +264,7 @@
             </span>
           </div>
 
-          <div class="col-sm-4 text-center">
+          <div class="col-sm-4 text-center mobile_width_100 mobile_padding_top_50px">
             <span class="block">
               <%= link_to "AdCom Designs", adcomdesigns_path, class: "footer_link" %>
             </span>
@@ -282,7 +282,7 @@
             </span>
           </div>
 
-          <div class="col-sm-4">
+          <div class="col-sm-4 mobile_width_100 mobile_padding_top_50px">
             <span class="block padding_bottom_30px">
               <ul class="list-inline text-center footer_social_list">
                 <li>
