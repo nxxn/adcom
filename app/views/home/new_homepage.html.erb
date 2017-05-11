@@ -163,30 +163,33 @@
          We deliver a return on our clients' investment​​
       </span>
     </div>
+  </div>
 
-    <div class="portfolio_slider pull-left">
+  <div class="portfolio_slider">
 
-      <% @clients.each do |client| %>
-        <div class="portolio_item_container no_side_padding">
-          <div class="col-sm-3">
-            <span class="block portolio_item_logo">
-              <%= image_tag client.work_image.url, class: "img-responsive portfolio_logo center_image" %>
-            </span>
-          </div>
-
-          <div class="col-sm-9 small_mobile_padding_top_30px">
-            <span class="block portfolio_item_name"><%= client.title %></span>
-
-            <span class="block portfolio_item_short_desc"><%= client.department %></span>
-
-            <span class="block portfolio_item_long_desc">
-              <%= client.description.html_safe %>
-            </span>
-          </div>
+    <% @clients.each do |client| %>
+      <div class="portolio_item_container no_side_padding">
+        <div class="col-sm-3">
+          <span class="block portolio_item_logo">
+            <%= image_tag client.work_image.url, class: "img-responsive portfolio_logo center_image" %>
+          </span>
         </div>
-      <% end %>
 
-    </div>
+        <div class="col-sm-9 small_mobile_padding_top_30px">
+          <span class="block portfolio_item_name"><%= client.title %></span>
+
+          <span class="block portfolio_item_short_desc"><%= client.department %></span>
+
+          <span class="block portfolio_item_long_desc">
+            <%= client.description.html_safe %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+  <div class="container">
 
     <div class="col-sm-12 no_side_padding padding_top_20px show_on_desktop">
       <ul class="list-inline zero_margin zero_padding text-center clients_logos_list portfolio_logos_list">
