@@ -16,9 +16,13 @@
         <%= image_tag @testimonial.client_image.url(:medium), alt: "Client profile image", class: "slider_item_image margin_top_20px margin_bottom_20px" %>
       <% end %>
 
-      <%= f.input :client_image, as: :file, label: "Client profile image" %>
+      <div class="col-sm-12 padding_top_20px padding_bottom_20px no_side_padding">
+        <%= f.input :client_image, as: :file, label: "Client profile image" %>
+      </div>
 
-      <%= f.submit "Save", class: "btn btn-default btn-success" %>
+      <div class="col-sm-12 padding_bottom_20px no_side_padding">
+        <%= f.submit "Save", class: "btn btn-default btn-success" %>
+      </div>
 
     <% end %>
 

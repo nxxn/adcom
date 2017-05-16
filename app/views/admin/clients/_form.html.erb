@@ -16,9 +16,13 @@
         <%= image_tag @client.work_image.url, alt: "Client logo", class: "portfolio_logo margin_top_20px margin_bottom_20px" %>
       <% end %>
 
-      <%= f.input :work_image, as: :file, label: "Client logo" %>
+      <div class="col-sm-12 padding_top_20px padding_bottom_20px no_side_padding">
+        <%= f.input :work_image, as: :file, label: "Client logo" %>
+      </div>
 
-      <%= f.submit "Save", class: "btn btn-default btn-success" %>
+      <div class="col-sm-12 padding_bottom_20px no_side_padding">
+        <%= f.submit "Save", class: "btn btn-default btn-success" %>
+      </div>
 
     <% end %>
 
