@@ -4,11 +4,11 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get '/clients', to: 'home#clients'
-  get '/services', to: 'home#services'
-  get '/about', to: 'home#about'
-  get '/contact', to: 'home#contact'
-  get '/writeitwell', to: 'home#writeitwell'
+  # get '/clients', to: 'home#clients'
+  # get '/services', to: 'home#services'
+  # get '/about', to: 'home#about'
+  # get '/contact', to: 'home#contact'
+  # get '/writeitwell', to: 'home#writeitwell'
   get '/write_it_well', to: 'home#write_it_well'
   get '/adcomdesigns', to: 'home#adcomdesigns'
 
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     resources :testimonials
   end
 
-  root 'home#index'
+  root 'home#new_homepage'
 
   match '/' => 'home#create', :as => 'message', :via => :post
 

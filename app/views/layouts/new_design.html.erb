@@ -228,12 +228,17 @@
         <div class="col-sm-12 no_side_padding footer_blocks_container mobile_block">
           <div class="col-sm-4 mobile_width_100 mobile_text_center">
             <span class="block">
-              <%= link_to root_url do %>
-                <%= image_tag("adcom_logo_square.png", class: "top_nav_logo_image") %>
+              <%= link_to root_url, class: "mobile_width_50 mobile_text_center" do %>
+                <%= image_tag("adcom_color_logo_square.png", alt: "AdCom logo", class: "top_nav_logo_image mobile_center_image") %>
               <% end %>
+              <%= link_to root_url, class: "mobile_width_50 mobile_text_center margin_left_30px mobile_margin_left_0px mobile_margin_top_10px" do %>
+                <%= image_tag("wiw_logo_square.png", alt: "WiW logo", class: "top_nav_logo_image mobile_center_image") %>
+              <% end %>
+
+              <div class="clearfix"></div>
             </span>
 
-            <span class="block font_size_16px grey_text padding_top_30px">
+            <span class="block font_size_16px grey_text padding_top_30px mobile_padding_top_30px">
               <span class="inline_block footer_icon vcenter">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
               </span>
