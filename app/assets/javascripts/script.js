@@ -15,6 +15,8 @@ $(document).ready(function() {
 
   var video_url = $("#video_modal").attr('src');
 
+  $("#video_modal").attr('src', '');
+
   $("#videoModal").on('hide.bs.modal', function(){
     $("#video_modal").attr('src', '');
   });
