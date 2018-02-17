@@ -1,4 +1,4 @@
-<div class="col-sm-12 text-center">
+<div class="col-sm-12 text-center padding_bottom_50px">
   <div class="btn-group text-left">
     <div class="text-left">
       <%= link_to "Back", admin_articles_path, class: "admin_article_back" %>
@@ -15,7 +15,11 @@
       <%= f.input :document, as: :file, label: "Add PDF file" %>
       <%= f.input :pdf, label: "Article has PDF file" %>
 
-      <%= f.input :active, label: "Publish article" %>
+      <div class="col-sm-12 no_side_padding padding_top_20px padding_bottom_20px">
+        <%= f.input :scheduled_date, label: "Date when article should be published" %>
+      </div>
+
+      <!-- <%= f.input :active, label: "Publish article" %> -->
 
       <%= f.submit "Save", class: "btn btn-default btn-success" %>
 

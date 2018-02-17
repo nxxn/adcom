@@ -3,11 +3,11 @@ class HomeController < ApplicationController
   layout 'new_design', only: [:new_homepage, :write_it_well, :adcomdesigns]
 
   def index
-    @article = Article.last
+    @article = Article.where(active: true).last
   end
 
   def new_homepage
-    @articles = Article.order("created_at DESC").limit(4)
+    @articles = Article.where("scheduled_date < ?", Time.now).order("scheduled_date DESC").limit(4)
     @clients = Client.order("created_at DESC")
     @testimonials = Testimonial.order("created_at DESC")
   end

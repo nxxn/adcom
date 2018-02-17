@@ -803,10 +803,6 @@ body {
   font-weight: 600;
 }
 
-.adcom_about_list {
-
-}
-
 .adcom_about_list li {
   list-style: none;
   padding-top: 30px;
@@ -824,12 +820,12 @@ body {
 }
 
 @media (min-width: 768px) {
-  .modal-dialog {
+  #videoModal .modal-dialog {
     width: calc(100% - 100px);
     margin: 30px auto;
   }
 
-  .modal-body {
+  #videoModal .modal-body {
     height: calc(100vh - 100px);
     padding: 0;
   }
@@ -916,6 +912,7 @@ body {
   height: 42px;
   width: 250px;
   border: 1px solid #9c9c9c;
+  padding: 0 15px;
 }
 
 .log_in_input:focus {
@@ -963,4 +960,112 @@ body {
 .about_us_nt_photo {
   max-height: 250px;
   border-radius: 50%;
+}
+
+#newsModal {
+  .modal-content {
+    background: #fff;
+    border-radius: 0px;
+
+    .modal-header {
+      border: none;
+    }
+
+    .news_modal_heading {
+      font-size: 22px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .news_modal_subheading {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .news_modal_input_container {
+      padding-top: 30px;
+      text-align: center;
+    }
+
+    .news_modal_input {
+      border: 2px solid;
+      border-color: #7b7b7b;
+      border-radius: 0;
+      text-align: center;
+      height: 40px;
+      width: 300px;
+      transition: all 0.2s linear;
+      font-weight: 700;
+
+      &:focus {
+        outline: none;
+        border-color: #b3b3b3;
+      }
+    }
+
+    .news_modal_input::-webkit-input-placeholder {
+      color: #333 !important;
+      fotn-size: 16px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+    }
+    .news_modal_input:-moz-placeholder {
+      color: #333 !important;
+      fotn-size: 16px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+    }
+
+    .news_modal_btn_container {
+      text-align: center;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+
+    .news_modal_btn {
+      display: inline-block;
+      width: 150px;
+      height: 40px;
+      background: #7b7b7b;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      fotn-size: 16px;
+      border-radius: 0;
+      border: none;
+      transition: all 0.2s linear;
+
+      &:hover, &:focus {
+        background: #909090;
+        outline: none;
+      }
+    }
+
+    .close {
+      opacity: 1;
+
+      &:hover, &:focus {
+        outline: none;
+      }
+    }
+
+    #mc_embed_signup {
+      margin-top: 0px;
+      div.response {
+        margin-left: 20%;
+        margin-top: 0;
+        width: 300px;
+      }
+
+      #mce-success-response {
+        margin-left: 10%;
+        width: 400px;
+      }
+    }
+  }
+}
+
+.modal-backdrop {
+  opacity:0.7 !important;
 }

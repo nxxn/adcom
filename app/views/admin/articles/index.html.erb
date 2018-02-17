@@ -13,10 +13,25 @@
             <div class="col-sm-12 no_side_padding">
               <span class="inline_block article_date">
                 <span class="block article_date_day">
-                  <%= l(article.created_at, :format => '%d') %>
+                  <% if article.scheduled_date.day == 29 && article.scheduled_date.month == 9 && article.scheduled_date.year == 2017 %>
+                    <%= l(article.created_at, :format => '%d') %>
+                  <% else %>
+                    <%= l(article.scheduled_date, :format => '%d') %>
+                  <% end %>
                 </span>
                 <span class="block article_date_month_year">
-                  <%= l(article.created_at, :format => '%^b %Y') %>
+                  <% if article.scheduled_date.day == 29 && article.scheduled_date.month == 9 && article.scheduled_date.year == 2017 %>
+                    <%= l(article.created_at, :format => '%^b %Y') %>
+                  <% else %>
+                    <%= l(article.scheduled_date, :format => '%^b %Y') %>
+                  <% end %>
+                </span>
+                <span class="block article_date_month_year">
+                  <% if article.scheduled_date.day == 29 && article.scheduled_date.month == 9 && article.scheduled_date.year == 2017 %>
+                    <%= l(article.created_at, :format => '%T') %>
+                  <% else %>
+                    <%= l(article.scheduled_date, :format => '%T') %>
+                  <% end %>
                 </span>
               </span>
               <span class="inline_block article_title_list">
