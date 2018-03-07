@@ -90,24 +90,14 @@ $(document).ready(function() {
 
   if(!$.cookie('newsCookie')){
     $.cookie('newsCookie', 'unseen', { path: '/' });
-
-    // var date = new Date();
-    // var minutes = 2;
-    // date.setTime(date.getTime() + (minutes * 60 * 1000));
-    // $.cookie("expireCookie", "expire", { expires: date, path: '/' });
-
-    console.log("ss");
   }
 
   function show_popup(){
     $('#newsModal').modal('show');
   };
-  // window.setTimeout( show_popup, 5000 );
 
   setInterval(function(){
-    console.log($.cookie('newsCookie'));
     if( $.cookie('newsCookie') === 'unseen' ) {
-      console.log($.cookie('newsCookie'));
       $.cookie('newsCookie', 'seen', { path: '/' });
 
       $('#videoModal').modal('hide');
@@ -116,5 +106,9 @@ $(document).ready(function() {
       window.setTimeout( show_popup, 500 );
     }
   }, 10000);
+
+  $('.mobile_links_list .top_nav_link').click(function() {
+    $('#navbar-collapse').collapse('hide');
+  });
 
 });
