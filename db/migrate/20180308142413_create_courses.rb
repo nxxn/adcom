@@ -2,7 +2,7 @@ class CreateCourses < ActiveRecord::Migration
   def change
     create_table :courses do |t|
       t.string     :title, default: ""
-      t.text       :description, default: ""
+      t.text       :description
       t.string     :book, default: ""
       t.string     :onsite, default: ""
       t.string     :webinar, default: ""
