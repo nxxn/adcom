@@ -14,6 +14,7 @@ $(document).ready(function() {
   $(window).on('resize', centerModals);
 
   var video_url = $("#video_modal").attr('src');
+  var autoplay_text = "?autoplay=1"
 
   $("#video_modal").attr('src', '');
 
@@ -21,8 +22,8 @@ $(document).ready(function() {
     $("#video_modal").attr('src', '');
   });
 
-  $("#videoModal").on('show.bs.modal', function(){
-    $("#video_modal").attr('src', video_url);
+  $("#video_modal_opener").on('click', function(){
+    $("#video_modal").attr('src', video_url + autoplay_text);
   });
 
   $('a[href*=#]:not([href=#])').click(function() {

@@ -175,7 +175,7 @@ body {
 .top_full_block {
   height: 100%;
   min-height: 100vh;
-  background: transparent asset-data-url('full01.jpg') top center no-repeat;
+  background: transparent asset-data-url('first_block_bg4.jpg') top center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -186,6 +186,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.top_block_overlay {
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .top_title {
@@ -296,6 +306,7 @@ body {
 .who_we_are_quotation {
   font-size: 24px;
   line-height: 60px;
+  text-align: right;
 }
 
 .who_we_are_quotes {
@@ -310,6 +321,7 @@ body {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 600;
+  text-align: right;
 }
 
 .who_we_are_title {
@@ -776,6 +788,7 @@ body {
 .topic_container {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 280px;
   height: 310px;
   padding: 30px;
@@ -959,7 +972,9 @@ body {
 
 .about_us_nt_photo {
   max-height: 250px;
-  border-radius: 50%;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.18);
 }
 
 #newsModal {
@@ -1068,4 +1083,73 @@ body {
 
 .modal-backdrop {
   opacity:0.7 !important;
+}
+
+.main_courses_container {
+
+  .course_container {
+    &.even_course_container {
+      padding: 30px 20px 0 0;
+
+      @media (max-width: 768px) {
+        padding: 30px 0 0 0;
+      }
+    }
+
+    &.odd_course_container {
+      padding: 30px 0 0 20px;
+
+      @media (max-width: 768px) {
+        padding: 30px 0 0 0;
+      }
+    }
+
+    .course_container_inner {
+      border: 3px solid #e4e4e4;
+      border-radius: 6px;
+      padding: 30px;
+      transition: all 0.4s linear;
+
+      &:hover {
+        background: #f9f9f9;
+        border-color: #c3c3c3;
+      }
+
+      .course_name {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .course_desc {
+        padding-top: 10px;
+        color: #737373;
+      }
+
+      .course_three_block {
+        padding: 30px 25px 0 0;
+
+        .course_three_block_name {
+          font-weight: 600;
+          padding-bottom: 5px;
+          font-size: 16px;
+        }
+
+        .course_three_block_text {
+          color: #737373;
+        }
+
+        .course_book_link {
+          color: #369254;
+          transition: all 0.4s linear;
+          font-weight: 600;
+
+          &:hover, &:focus {
+            color: #3bb964;
+            text-decoration: none;
+            outline: none;
+          }
+        }
+      }
+    }
+  }
 }

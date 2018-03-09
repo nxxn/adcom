@@ -1,0 +1,60 @@
+<section class="admin_articles_list">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding">
+      <%= link_to "New Course", new_admin_course_path, class: "new_article_link white_text btn btn-success" %>
+    </div>
+
+    <% @courses.each_slice(2) do |slice| %>
+      <div class="col-sm-12 main_courses_container">
+        <% slice.each_with_index do |course, index| %>
+          <div class="col-sm-6 course_container <%= index.even? ? 'even_course_container' : 'odd_course_container' %>">
+            <div class="col-sm-12 course_container_inner">
+              <div class="col-sm-12 no_side_padding">
+                <span class="block course_name">
+                  <%= course.title %>
+                </span>
+
+                <span class="block course_desc">
+                  <%= course.description %>
+                </span>
+              </div>
+
+              <div class="col-sm-12 no_side_padding">
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Write It Well Book</span>
+                  <span class="block course_three_block_text">
+                    <% if course.book_link.empty? %>
+                      <%= course.book %>
+                    <% else %>
+                      <%= link_to course.book, course.book_link, class: "course_book_link" %>
+                    <% end %>
+                  </span>
+                </span>
+
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Onsite</span>
+                  <span class="block course_three_block_text">
+                    <%= course.onsite %>
+                  </span>
+                </span>
+
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Webinar</span>
+                  <span class="block course_three_block_text">
+                    <%= course.webinar %>
+                  </span>
+                </span>
+              </div>
+
+              <div class="col-sm-12 padding_top_40px no_side_padding">
+                <%= link_to "Edit", edit_admin_course_path(course), class: "admin_article_edit white_text btn btn-warning" %>
+                <%= link_to "Delete", admin_course_path(course), :confirm => 'Are you sure?', :method => :delete, class: "admin_article_delete white_text btn btn-danger margin_left_20px" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</section>

@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :articles
     resources :clients
     resources :testimonials
+    resources :courses
   end
 
   root 'home#new_homepage'

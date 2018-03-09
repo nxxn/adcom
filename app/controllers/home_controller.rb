@@ -24,4 +24,8 @@ class HomeController < ApplicationController
     end
   end
 
+  def write_it_well
+    @courses = Course.all.order("created_at ASC")
+  end
+
 end
