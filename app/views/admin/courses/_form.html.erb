@@ -14,6 +14,14 @@
     <%= f.input :onsite, label: "Onsite"  %>
     <%= f.input :webinar, label: "Webinar"  %>
 
+    <% if @course.icon.present? %>
+      <%= image_tag @course.icon.url, alt: "Course Icon", class: "portfolio_logo margin_top_20px margin_bottom_20px" %>
+    <% end %>
+
+    <div class="col-sm-12 padding_top_20px padding_bottom_20px no_side_padding">
+      <%= f.input :icon, as: :file, label: "Course Icon" %>
+    </div>
+
     <div class="col-sm-12 padding_bottom_20px no_side_padding">
       <%= f.submit "Save", class: "btn btn-default btn-success" %>
     </div>

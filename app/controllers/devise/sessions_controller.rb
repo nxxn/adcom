@@ -1,6 +1,6 @@
 class Devise::SessionsController < DeviseController
   layout "new_design"
-  
+
   prepend_before_action :require_no_authentication, only: [:new, :create]
   prepend_before_action :allow_params_authentication!, only: :create
   prepend_before_action :verify_signed_out_user, only: :destroy
@@ -50,6 +50,12 @@ class Devise::SessionsController < DeviseController
 
   def translation_scope
     'devise.sessions'
+  end
+
+  def set_flash_message!(key, kind, options = {})
+    if is_flashing_format?
+      set_flash_message(key, kind, options)
+    end
   end
 
   private

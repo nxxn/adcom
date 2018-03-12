@@ -1122,6 +1122,16 @@ body {
         box-shadow: 0 10px 30px 0 rgba(0,0,0,0.38);
       }
 
+      .course_image_container {
+        padding-bottom: 20px;
+
+        img {
+          margin: 0 auto;
+          display: block;
+          max-height: 50px;
+        }
+      }
+
       .course_name {
         font-size: 18px;
         font-weight: 600;
