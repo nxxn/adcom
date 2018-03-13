@@ -112,4 +112,12 @@ $(document).ready(function() {
     $('#navbar-collapse').collapse('hide');
   });
 
+  $to_contacts = $('.course_to_contacts');
+
+  //smooth scroll to contacts
+	$to_contacts.on('click', function(event){
+    $('html,body').animate({
+      scrollTop: $('#contact_us').offset().top
+    }, 1000);
+	});
 });

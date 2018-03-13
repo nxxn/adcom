@@ -152,13 +152,13 @@
       <div class="col-sm-12 main_courses_container">
         <% slice.each_with_index do |course, index| %>
           <div class="col-sm-6 course_container <%= index.even? ? 'even_course_container' : 'odd_course_container' %>">
-            <div class="col-sm-12 course_container_inner">
+            <div class="col-sm-12 course_container_inner course_to_contacts">
               <% if course.icon.present? %>
                 <div class="col-sm-12 no_side_padding course_image_container">
                   <%= image_tag course.icon.url, class: "" %>
                 </div>
               <% end %>
-              
+
               <div class="col-sm-12 no_side_padding">
                 <span class="block course_name">
                   <%= course.title %>
