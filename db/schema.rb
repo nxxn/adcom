@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929112423) do
+ActiveRecord::Schema.define(version: 20180404185541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 20170929112423) do
     t.string   "title",                 default: ""
     t.text     "text"
     t.boolean  "active",                default: true
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                                            null: false
+    t.datetime "updated_at",                                            null: false
     t.string   "slug"
     t.text     "short_description"
     t.string   "document_file_name"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20170929112423) do
     t.integer  "document_file_size"
     t.datetime "document_updated_at"
     t.boolean  "pdf",                   default: false
-    t.datetime "scheduled_date"
+    t.datetime "scheduled_date",        default: '2018-03-07 17:28:15'
   end
 
   add_index "articles", ["slug"], name: "index_articles_on_slug", unique: true, using: :btree
@@ -60,6 +60,25 @@ ActiveRecord::Schema.define(version: 20170929112423) do
     t.datetime "work_image_updated_at"
     t.datetime "created_at",                           null: false
     t.datetime "updated_at",                           null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "title",             default: ""
+    t.text     "description",       default: ""
+    t.string   "book",              default: ""
+    t.string   "onsite",            default: ""
+    t.string   "webinar",           default: ""
+    t.string   "book_link",         default: ""
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "pdf_file_name"
+    t.string   "pdf_content_type"
+    t.integer  "pdf_file_size"
+    t.datetime "pdf_updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|

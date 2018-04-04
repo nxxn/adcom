@@ -64,7 +64,7 @@ class Admin::CoursesController < AdminController
   private
 
     def course_params
-      params.require(:course).permit(:title, :description, :book, :onsite, :webinar, :book_link, :icon)
+      params.require(:course).permit(:title, :description, :book, :onsite, :webinar, :book_link, :icon, :pdf)
     end
 
 end

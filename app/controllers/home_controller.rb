@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     @articles = Article.where("scheduled_date < ?", Time.now).order("scheduled_date DESC").limit(4)
     @clients = Client.order("created_at DESC")
     @testimonials = Testimonial.order("created_at DESC")
+    @courses = Course.all.order("created_at ASC")
   end
 
   def create

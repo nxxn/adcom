@@ -1,6 +1,6 @@
 <section class="top_full_block">
   <div class="top_block_overlay"></div>
-  
+
   <div class="container animated fadeInUp">
     <div class="col-sm-12 no_side_padding top_title padding_top_50px">
       Improve your business
@@ -160,7 +160,95 @@
   </div>
 </section>
 
-<section id="portfolio" class="padding_top_70px padding_bottom_70px">
+<section class="padding_top_70px padding_bottom_90px">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding padding_bottom_50px">
+      <span class="block big_title">
+        Explore our topics
+      </span>
+
+      <span class="block text-center testimonial_subtitle padding_top_20px">
+        They all build or deepen measurable, job-relevant communication skills.
+      </span>
+    </div>
+
+    <% @courses.each_slice(2) do |slice| %>
+      <div class="col-sm-12 main_courses_container">
+        <% slice.each_with_index do |course, index| %>
+          <div class="col-sm-6 course_container <%= index.even? ? 'even_course_container' : 'odd_course_container' %>">
+            <div class="col-sm-12 course_container_inner course_to_contacts">
+              <% if course.icon.present? %>
+                <div class="col-sm-12 no_side_padding course_image_container">
+                  <%= image_tag course.icon.url, class: "" %>
+                </div>
+              <% end %>
+
+              <div class="col-sm-12 no_side_padding">
+                <span class="block course_name">
+                  <%= course.title %>
+                </span>
+
+                <span class="block course_desc">
+                  <%= course.description %>
+                </span>
+              </div>
+
+              <div class="col-sm-12 no_side_padding">
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Write It Well Book</span>
+                  <span class="block">
+                    <% if course.book_link.empty? %>
+                      <%= course.book %>
+                    <% else %>
+                      <%= link_to course.book, course.book_link, class: "course_book_link" %>
+                    <% end %>
+                  </span>
+                </span>
+
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Onsite</span>
+                  <span class="block">
+                    <%= course.onsite %>
+                  </span>
+                </span>
+
+                <span class="inline_block course_three_block">
+                  <span class="block course_three_block_name">Webinar</span>
+                  <span class="block">
+                    <%= course.webinar %>
+                  </span>
+                </span>
+
+                <% if course.pdf.present? %>
+                  <span class="inline_block course_three_block">
+                    <span class="block course_three_block_name">PDF</span>
+                    <span class="block course_three_block_text">
+                      <%= link_to "Download PDF", course.pdf.url, target: "_blank", class: "course_book_link" %>
+                    </span>
+                  </span>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <div class="col-sm-12 no_side_padding padding_top_50px mobile_padding_top_30px">
+      <span class="block text-center testimonial_subtitle padding_top_20px">
+        All workshops are customized, please drop us a line!
+      </span>
+
+      <span class="block text-center padding_top_40px">
+        <a href="#contact_us" class="inline_block button_template transparent_button">
+          Get in Touch
+        </a>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="padding_top_70px padding_bottom_70px top_block_border">
   <div class="container">
     <div class="col-sm-12 no_side_padding padding_bottom_70px">
       <span class="block big_title">Case Studies</span>

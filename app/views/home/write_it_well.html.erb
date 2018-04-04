@@ -194,6 +194,15 @@
                     <%= course.webinar %>
                   </span>
                 </span>
+
+                <% if course.pdf.present? %>
+                  <span class="inline_block course_three_block">
+                    <span class="block course_three_block_name">PDF</span>
+                    <span class="block course_three_block_text">
+                      <%= link_to "Download PDF", course.pdf.url, target: "_blank", class: "course_book_link" %>
+                    </span>
+                  </span>
+                <% end %>
               </div>
             </div>
           </div>
