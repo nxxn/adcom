@@ -164,11 +164,45 @@
   <div class="container">
     <div class="col-sm-12 no_side_padding padding_bottom_50px">
       <span class="block big_title">
+        Get to Know Our Offerings
+      </span>
+
+      <span class="block text-center testimonial_subtitle padding_top_20px">
+        We have a variety of in-person, virtual and text materials we can use to help you accomplish your learning goals.
+      </span>
+
+      <span class="block text-center padding_top_30px">
+        <%= link_to "Learn More", write_it_well_path, class: "inline_block button_template transparent_button" %>
+      </span>
+
+      <span class="block text-center testimonial_subtitle padding_top_50px">
+         Download our one-page overview of our courses and materials.
+      </span>
+
+      <span class="block text-center padding_top_30px">
+        <%= link_to "Download", @courses_pdf.main_pdf.url, class: "inline_block button_template transparent_button" %>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="padding_top_70px padding_bottom_90px top_block_border">
+  <div class="container">
+    <div class="col-sm-12 no_side_padding padding_bottom_50px">
+      <span class="block big_title">
         Explore our topics
       </span>
 
       <span class="block text-center testimonial_subtitle padding_top_20px">
         They all build or deepen measurable, job-relevant communication skills.
+      </span>
+
+      <span class="block text-center testimonial_subtitle padding_top_30px">
+        Download our handy, at-a-glance guide to all of our courses and materials
+      </span>
+
+      <span class="block text-center padding_top_30px">
+        <%= link_to "Download", @courses_pdf.main_pdf.url, class: "inline_block button_template transparent_button" %>
       </span>
     </div>
 
@@ -223,7 +257,7 @@
                   <span class="inline_block course_three_block">
                     <span class="block course_three_block_name">PDF</span>
                     <span class="block course_three_block_text">
-                      <%= link_to "Download PDF", course.pdf.url, target: "_blank", class: "course_book_link" %>
+                      <%= link_to "Download our course brochure (PDF)", course.pdf.url, target: "_blank", class: "course_book_link" %>
                     </span>
                   </span>
                 <% end %>

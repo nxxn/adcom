@@ -11,6 +11,7 @@ class HomeController < ApplicationController
     @clients = Client.order("created_at DESC")
     @testimonials = Testimonial.order("created_at DESC")
     @courses = Course.all.order("created_at ASC")
+    @courses_pdf = CoursesPdf.last
   end
 
   def create
@@ -27,6 +28,7 @@ class HomeController < ApplicationController
 
   def write_it_well
     @courses = Course.all.order("created_at ASC")
+    @courses_pdf = CoursesPdf.last
   end
 
 end

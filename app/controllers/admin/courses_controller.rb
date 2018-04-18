@@ -22,7 +22,6 @@ class Admin::CoursesController < AdminController
 
   def edit
     @course = Course.find(params[:id])
-
   end
 
   def create

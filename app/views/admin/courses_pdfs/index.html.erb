@@ -1,0 +1,25 @@
+<section class="admin_articles_list">
+  <div class="container">
+
+    <% if @courses_pdf %>
+      <div class="col-sm-12 main_courses_container">
+        <span class="block testimonial_subtitle padding_top_30px">
+          At-a-glance guide to all of our courses and materials
+        </span>
+
+        <span class="block padding_top_30px">
+          <%= link_to "Download", @courses_pdf.main_pdf.url, class: "inline_block button_template transparent_button" %>
+        </span>
+
+        <div class="col-sm-12 padding_top_40px no_side_padding">
+          <%= link_to "Edit", edit_admin_courses_pdf_path(@courses_pdf), class: "admin_article_edit white_text btn btn-warning" %>
+        </div>
+      </div>
+    <% else %>
+      <div class="col-sm-12 no_side_padding">
+        <%= link_to "Add new At-a-glance guide", new_admin_courses_pdf_path, class: "new_article_link white_text btn btn-success" %>
+      </div>
+    <% end %>
+
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <div class="text-left">
+    <%= link_to "Back", admin_courses_path, class: "admin_article_back" %>
+  </div>
+</div>
+
+<div class="col-sm-8 col-sm-offset-2 padding_top_30px">
+  <%= simple_form_for [:admin, @courses_pdf] do |f| %>
+
+    <div class="col-sm-12 padding_top_20px padding_bottom_20px no_side_padding">
+      <%= f.input :main_pdf, as: :file, label: "At a Glance PDF" %>
+    </div>
+
+    <div class="col-sm-12 padding_bottom_20px no_side_padding">
+      <%= f.submit "Save", class: "btn btn-default btn-success" %>
+    </div>
+
+  <% end %>
+</div>

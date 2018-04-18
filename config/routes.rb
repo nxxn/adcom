@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :clients
     resources :testimonials
     resources :courses
+    resources :courses_pdfs
   end
 
   root 'home#new_homepage'
