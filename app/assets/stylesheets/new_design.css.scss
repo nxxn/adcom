@@ -25,6 +25,10 @@ body {
 
 .top_nav_logo_image {
   width: 100px;
+
+  @media (max-width: 768px) {
+    width: 70px;
+  }
 }
 
 .top_nav_logo_text {
@@ -307,6 +311,10 @@ body {
   font-size: 24px;
   line-height: 60px;
   text-align: right;
+
+  @media (max-width: 768px) {
+    line-height: 40px;
+  }
 }
 
 .who_we_are_quotes {
@@ -326,11 +334,19 @@ body {
 
 .who_we_are_title {
   text-align: left;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
 }
 
 .who_we_are_text_container p {
   margin: 20px 0;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .who_we_are_text_container p:last-child {
@@ -350,6 +366,10 @@ body {
 .portfolio_slider {
   width: calc(100% - 200px);
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 50px);
+  }
 }
 
 .testimonial_slider {
@@ -677,6 +697,10 @@ body {
 .portfolio_item_name {
   font-size: 30px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .portfolio_item_short_desc {
@@ -975,6 +999,12 @@ body {
   border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.18);
+
+  @media (max-width: 768px) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 #newsModal {
@@ -1169,5 +1199,11 @@ body {
         }
       }
     }
+  }
+}
+
+.top_btns_container {
+  @media (max-width: 350px) {
+    display: none;
   }
 }
